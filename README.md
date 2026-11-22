@@ -1,6 +1,8 @@
 # Psych Ward Madness — PWA
 
-Low-poly 3D mobile brawler. Installable, fullscreen, works offline.
+Low-poly 3D mobile brawler with a PS2 look. Installable, fullscreen, works offline.
+
+Includes: boomerang weapons, the Market with mystery crates and 3D unboxing room, wardrobe long-press specs, 4 maps (Ward C, Cafeteria, Rec Room, Outside), awards, instant replay, reset progress.
 
 ## Files
 
@@ -70,14 +72,15 @@ certbot --nginx -d pwm.yourdomain.com
 ## Updating
 
 1. Replace the files in the web root.
-2. Bump the cache name in `sw.js` (`const V='pwm-v23'` → `pwm-v24`).
+2. Bump the cache name in `sw.js` (`const V='pwm-v33'` → `pwm-v34`).
 3. Players get the new version on their next launch (close and reopen the app once).
 
 ## Saved data
 
-Progress (best score, awards, wardrobe, name, room, camera choice) is stored in the browser's `localStorage` on each device. Clearing site data resets it.
+Progress (coins, crate items, best score, awards, wardrobe, name, room, camera choice) is stored in the browser's `localStorage` on each device. **RESET PROGRESS** on the title screen wipes it (keeps name and camera). Clearing site data also resets it.
 
 ## Controls
 
-- **Touch:** left thumb = move, SWING (hold to charge), DASH, GRAB/THROW.
+- **Touch:** left thumb = move, SWING/THROW boomerang (hold to charge), DASH, GRAB/THROW.
+- **Wardrobe:** tap to equip, long-press for specs.
 - **Keyboard:** WASD move · Space swing (hold to charge) · Shift dash · E grab/throw · C camera.
